@@ -70,11 +70,9 @@ Hardware
 
 Development has been split in two parts, each part having 3 different smaller steps
 
-## [Part 1]
+## [Part 1](/doc/part1.md)
 
-## [Part 2]
-
-## [Part 3]
+## [Part 2](/doc/part2.md)
 
 
 
