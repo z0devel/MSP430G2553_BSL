@@ -25,7 +25,7 @@ Open your preferred Serial com application with:
 
 What follows is a capture of some commands sent to Step1.App
 
-![part1_1.png](doc/part1_1.png)
+![part1_1.png](/doc/part1_1.png)
 
 ### Results
 
@@ -183,7 +183,7 @@ However, we will use an alternative way:
 
 In order to guarantee flashing App code does not erases BSL cose at 0xC000, change the following
 
-![part1_2.png](doc/part1_2.png)
+![part1_2.png](/doc/part1_2.png)
 
 
 ## BSL code
@@ -199,11 +199,11 @@ To see the effect of the changes, follow the steps:
 * Connect through the serial interface and make sure the command set is now expanded
 
 
-![part1_3.png](doc/part1_3.png)
+![part1_3.png](/doc/part1_3.png)
 
 * Add a breakpoint just before the jump
 
-![part1_4.png](doc/part1_4.png)
+![part1_4.png](/doc/part1_4.png)
 
 * At the serial interface select command 3 (jump)
 * At CCS open the registers and Disassembly views
@@ -211,16 +211,16 @@ To see the effect of the changes, follow the steps:
    * The Disassembly shows clearly the Jump we are about to do
 
 
-![part1_5.png](doc/part1_5.png)
+![part1_5.png](/doc/part1_5.png)
 
 * Step in, the debugging ability is lost. The red LED flashes, and that means we are executing BSL code
 * Pause, or suspend, the execution
 
-![part1_6.png](doc/part1_6.png)
+![part1_6.png](/doc/part1_6.png)
 
 * The PC and Disassembly views show code being executed around 0xC000. This is the confirmation BSL is being executed.
 
-![part1_7.png](doc/part1_7.png)
+![part1_7.png](/doc/part1_7.png)
 
 In case you power cycle the board you will notice App is the executed code. This is the expected outcome, as App was flashed as the second stage flashing, and that means the App is flashed as the main application on the memory.
 
@@ -252,7 +252,7 @@ Import project Step3.App. Have a look at the changes in code
 
 The image below show how the new options work
 
-![part1_8.png](doc/part1_8.png)
+![part1_8.png](/doc/part1_8.png)
 
 ## BSL code
 
@@ -360,7 +360,7 @@ Changes in linker command file
     }
 
 * CCS settings
-![part1_9.png](doc/part1_9.png)
+![part1_9.png](/doc/part1_9.png)
 
 ## Results
 
@@ -371,7 +371,7 @@ To see the effect of the changes, follow the steps:
 
 The green LED flashes, App code is running. Select erase flash and jump to BSL 
 
-![part1_10.png](doc/part1_10.png)
+![part1_10.png](/doc/part1_10.png)
 
 The red LED flashes non-stop.
 
@@ -380,6 +380,6 @@ As the INFO_D byte0 has been erased, the BSL failed to validate the boot criteri
 
 Restart the board and make sure the green LED flashes again. This time write 'a' into INFO_D and jump to BSL code
 
-![part1_11.png](doc/part1_11.png)
+![part1_11.png](/doc/part1_11.png)
 
 The red LED flashes for some seconds, after INFO_D byte0 is validated as 'a' the execution jumps again to App code, the green LED flashes back.
