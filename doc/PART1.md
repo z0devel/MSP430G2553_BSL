@@ -1,3 +1,7 @@
+# PART 1
+
+
+
 # Step (I)
 
 
@@ -365,7 +369,7 @@ Changes in linker command file
 ## Results
 
 To see the effect of the changes, follow the steps:
-* Execute the BSL applications.
+* Execute the BSL application.
 * Execute (debug) the App application. 
 * Connect through the serial interface and make sure the command set is now expanded.
 
